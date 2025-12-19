@@ -266,4 +266,4 @@ If you have questions:
 2. Search closed issues
 3. Create a new issue with the "question" label
 
-Thank you for contributing to CollabSpace! 🚀
+Thank you for contributing to CollabSpace!

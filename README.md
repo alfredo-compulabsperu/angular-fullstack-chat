@@ -4,7 +4,7 @@
 
 A production-ready, enterprise-grade Angular application with NestJS backend for real-time collaboration, task management, and team communication.
 
-## 🚀 Features
+## Features
 
 - **Real-Time Chat**: WebSocket-powered messaging with typing indicators, online status, and read receipts
 - **Task Management**: Kanban-style task board with drag-and-drop functionality
@@ -14,7 +14,7 @@ A production-ready, enterprise-grade Angular application with NestJS backend for
 - **State Management**: Reactive state management with RxJS
 - **Performance Optimized**: Lazy loading, virtual scrolling, and OnPush change detection
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 20.x or higher
 - npm 10.x or higher
@@ -22,7 +22,7 @@ A production-ready, enterprise-grade Angular application with NestJS backend for
 - PostgreSQL 14+ (if running locally without Docker)
 - Redis 7+ (if running locally without Docker)
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### Installation
 
@@ -70,7 +70,7 @@ npm run start:dev
 # API available at http://localhost:3000
 ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 angular-fullstack-chat/
@@ -110,7 +110,7 @@ angular-fullstack-chat/
 └── README.md
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Frontend Tests
 
@@ -142,7 +142,7 @@ npm run test:cov
 npm run test:e2e
 ```
 
-## 📦 Building for Production
+## Building for Production
 
 ### Frontend
 
@@ -160,7 +160,7 @@ npm run build
 # Build artifacts will be stored in the `dist/` directory
 ```
 
-## 🔧 Environment Variables
+## Environment Variables
 
 ### Frontend (`frontend/src/environments/environment.prod.ts`)
 
@@ -199,7 +199,7 @@ JWT_REFRESH_EXPIRATION=604800
 CORS_ORIGIN=http://localhost:4200
 ```
 
-## 🏛️ Architecture
+## Architecture
 
 ### Frontend Architecture
 
@@ -218,7 +218,7 @@ CORS_ORIGIN=http://localhost:4200
 - **Database**: PostgreSQL with TypeORM for data persistence
 - **Caching**: Redis for session management and caching
 
-## 🔐 Security
+## Security
 
 - JWT-based authentication with refresh tokens
 - Password hashing using bcrypt
@@ -229,7 +229,7 @@ CORS_ORIGIN=http://localhost:4200
 - XSS protection
 - CSRF token implementation
 
-## 📊 Performance
+## Performance
 
 - **Frontend**:
   - Lazy loading of feature modules
@@ -245,7 +245,7 @@ CORS_ORIGIN=http://localhost:4200
   - Compression middleware
   - Rate limiting
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -253,15 +253,15 @@ CORS_ORIGIN=http://localhost:4200
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👥 Authors
+## Authors
 
 - **Alfredo** - [alfredo-compulabsperu](https://github.com/alfredo-compulabsperu)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Angular Team for the amazing framework
 - NestJS Team for the powerful backend framework
