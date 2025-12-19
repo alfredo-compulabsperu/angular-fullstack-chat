@@ -74,7 +74,11 @@ export class AuthService {
       throw new UnauthorizedException('Invalid credentials');
     }
 
-    const payload = { email: user.email, sub: user.id, username: user.username };
+    const payload = {
+      email: user.email,
+      sub: user.id,
+      username: user.username,
+    };
     const accessToken = this.jwtService.sign(payload);
     const refreshToken = this.jwtService.sign(payload, { expiresIn: '7d' });
 
@@ -112,7 +116,9 @@ export class AuthService {
   async refreshToken(token: string) {
     try {
       const payload = this.jwtService.verify(token);
-      const user = Array.from(this.users.values()).find((u) => u.id === payload.sub);
+      const user = Array.from(this.users.values()).find(
+        (u) => u.id === payload.sub,
+      );
 
       if (!user) {
         throw new UnauthorizedException('User not found');
@@ -124,7 +130,9 @@ export class AuthService {
         username: user.username,
       };
       const accessToken = this.jwtService.sign(newPayload);
-      const refreshToken = this.jwtService.sign(newPayload, { expiresIn: '7d' });
+      const refreshToken = this.jwtService.sign(newPayload, {
+        expiresIn: '7d',
+      });
 
       const { password: _, ...userWithoutPassword } = user;
       return {

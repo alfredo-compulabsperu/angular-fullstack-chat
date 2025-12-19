@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 import { environment } from '../../../environments/environment';
@@ -131,9 +132,21 @@ describe('AuthService', () => {
 
   describe('isAuthenticated', () => {
     it('should return true when access token exists', () => {
+      const mockUser = {
+        id: '1',
+        email: 'test@example.com',
+        username: 'testuser',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+      
       localStorage.setItem('accessToken', 'test-token');
-      service = TestBed.inject(AuthService); // Reload service to pick up localStorage
-      expect(service.isAuthenticated()).toBe(true);
+      localStorage.setItem('currentUser', JSON.stringify(mockUser));
+      
+      // Create a new service instance that will read from localStorage
+      const http = TestBed.inject(HttpClient);
+      const tempService = new AuthService(http, routerSpy);
+      expect(tempService.isAuthenticated()).toBe(true);
     });
 
     it('should return false when no access token', () => {
