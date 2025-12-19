@@ -160,6 +160,10 @@ By participating in this project, you agree to maintain a respectful and collabo
 
 ## Testing Guidelines
 
+### Firewall Configuration
+
+If you encounter DNS resolution errors when running Chrome Headless tests in a restricted network environment, refer to [FIREWALL_WHITELIST.md](./FIREWALL_WHITELIST.md) for a list of domains that need to be whitelisted.
+
 ### Unit Tests
 
 **Frontend:**

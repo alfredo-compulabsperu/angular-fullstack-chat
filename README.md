@@ -112,6 +112,10 @@ angular-fullstack-chat/
 
 ## 🧪 Testing
 
+### Firewall Configuration for Testing
+
+If running tests in a restricted network environment, certain Google domains need to be whitelisted for Chrome Headless. See [FIREWALL_WHITELIST.md](./FIREWALL_WHITELIST.md) for details.
+
 ### Frontend Tests
 
 ```bash
